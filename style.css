@@ -28,11 +28,7 @@ body {
     min-height: 100vh;
 }
 
-.header-spacer {
-    height: 140px;
-}
-
-header {
+.header-large {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,31 +37,52 @@ header {
     background: linear-gradient(160deg, #0d503c 0%, #1a8f6e 50%, #2dd4a8 100%);
     color: white;
     text-align: center;
-    padding: var(--header-padding, 2rem);
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+}
+
+.header-small {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(160deg, #0d503c 0%, #1a8f6e 50%, #2dd4a8 100%);
+    color: white;
+    text-align: center;
+    padding: 0.5rem 2rem;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 100;
     box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
 }
 
-header.horizontal {
-    flex-direction: row;
+.header-small.visible {
+    transform: translateY(0);
 }
 
-header.horizontal .tagline {
-    display: none;
+.header-small h1 {
+    font-size: 1.2rem;
+    margin: 0;
 }
 
 .logo {
-    width: var(--logo-size, 60px);
+    width: 60px;
     height: auto;
     filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
 }
 
+.logo-small {
+    width: 30px;
+    height: auto;
+}
+
 header h1 {
-    font-size: var(--title-size, 2.5rem);
+    font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: -0.02em;
     color: white;
@@ -75,7 +92,7 @@ header h1 {
     font-size: 1rem;
     font-weight: 400;
     color: white;
-    opacity: var(--tagline-opacity, 0.9);
+    opacity: 0.9;
 }
 
 nav {

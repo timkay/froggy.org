@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Froggy.org - Jennifer Kay</title>
-    <link rel="stylesheet" href="style.css?v=52">
+    <link rel="stylesheet" href="style.css?v=53">
 </head>
 <body>
-    <div class="version">v52</div>
-    <div class="header-spacer"></div>
-    <header>
+    <div class="version">v53</div>
+
+    <header class="header-large">
         <img src="logo.svg" alt="Froggy logo" class="logo">
         <h1>froggy.org</h1>
         <p class="tagline">Welcome to Jennifer Kay's corner of the web</p>
+    </header>
+
+    <header class="header-small">
+        <img src="logo.svg" alt="Froggy logo" class="logo-small">
+        <h1>froggy.org</h1>
     </header>
 
     <nav>
@@ -46,28 +51,18 @@
     </footer>
 
     <script>
-let isHorizontal = false;
+const headerLarge = document.querySelector('.header-large');
+const headerSmall = document.querySelector('.header-small');
+const smallHeight = 50;
+
 window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY;
-    const maxScroll = 150;
-    const progress = Math.min(scrollY / maxScroll, 1);
+    const largeHeight = headerLarge.offsetHeight;
+    const triggerPoint = largeHeight - smallHeight;
 
-    const root = document.documentElement.style;
-    const header = document.querySelector('header');
-
-    root.setProperty('--header-padding', `${2 - progress * 1.5}rem`);
-    root.setProperty('--logo-size', `${60 - progress * 35}px`);
-    root.setProperty('--title-size', `${2.5 - progress * 1.5}rem`);
-    root.setProperty('--tagline-opacity', `${0.9 - progress * 0.9}`);
-    root.setProperty('--nav-opacity', `${1 - progress}`);
-    root.setProperty('--nav-height', `${60 - progress * 60}px`);
-
-    if (!isHorizontal && progress > 0.7) {
-        header.classList.add('horizontal');
-        isHorizontal = true;
-    } else if (isHorizontal && progress < 0.3) {
-        header.classList.remove('horizontal');
-        isHorizontal = false;
+    if (window.scrollY >= triggerPoint) {
+        headerSmall.classList.add('visible');
+    } else {
+        headerSmall.classList.remove('visible');
     }
 });
 </script>
