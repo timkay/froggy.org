@@ -147,7 +147,7 @@ nav a:hover {
 main {
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 1.5rem;
     max-width: 1200px;
     margin: 0 auto;
@@ -196,7 +196,7 @@ section a:hover {
 
 .teaching-graphic {
     float: right;
-    width: 224px;
+    width: 180px;
     margin: 0 0 0.5rem 1rem;
 }
 
@@ -213,7 +213,7 @@ section a:hover {
 
 .profile-photo {
     width: auto;
-    height: 160px;
+    height: 184px;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -227,6 +227,7 @@ section a:hover {
 #about {
     padding-right: 120px;
 }
+
 
 @keyframes wobble {
     0%, 100% { transform: rotate(3deg); }
