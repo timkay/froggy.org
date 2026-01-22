@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brad's Art - froggy.org</title>
-    <link rel="stylesheet" href="style.css?v=109">
+    <link rel="stylesheet" href="style.css?v=112">
 </head>
 <body>
     <header class="header-large art-theme subpage">
@@ -80,10 +80,13 @@ function showLightbox(index) {
     document.body.style.overflow = 'hidden';
 
     // Request fullscreen on mobile
-    if (lightbox.requestFullscreen) {
-        lightbox.requestFullscreen().catch(() => {});
-    } else if (lightbox.webkitRequestFullscreen) {
-        lightbox.webkitRequestFullscreen();
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen().catch(() => {});
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
     }
 }
 
