@@ -158,8 +158,19 @@ section a:hover {
 
 .teaching-graphic {
     float: right;
-    width: 130px;
+    width: 195px;
     margin: 0 0 0.5rem 1rem;
+}
+
+.brad-photo {
+    float: right;
+    width: 100px;
+    height: auto;
+    margin: 0 0 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(45, 212, 168, 0.5), 0 8px 20px rgba(0,0,0,0.2);
+    object-fit: cover;
+    object-position: top;
 }
 
 .profile-photo {
@@ -208,6 +219,132 @@ footer {
 
 footer p {
     color: rgba(255,255,255,0.6);
+}
+
+.treatment-gallery {
+    background: #333;
+    padding: 2rem;
+    text-align: center;
+}
+
+.treatment-gallery h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.treatments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.treatments div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.treatments span {
+    color: white;
+    font-size: 0.85rem;
+}
+
+.treatments img {
+    width: 100px;
+    height: 120px;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* 2. Circle */
+.treat-2 {
+    border-radius: 50%;
+    border: 4px solid #2dd4a8;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 3. Polaroid */
+.treat-3 {
+    background: white;
+    padding: 8px 8px 30px 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    transform: rotate(-3deg);
+}
+
+/* 4. Hexagon */
+.treat-4 {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+/* 5. Diamond */
+.treat-5 {
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* 6. Rounded + Shadow */
+.treat-6 {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+/* 7. Double Border */
+.treat-7 {
+    border-radius: 8px;
+    border: 4px solid white;
+    outline: 4px solid #1a8f6e;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 8. Stamp */
+.treat-8 {
+    border: 8px solid white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    outline: 2px dashed #999;
+    outline-offset: 4px;
+}
+
+/* 9. Gradient Border */
+.treat-9 {
+    border-radius: 12px;
+    border: 4px solid transparent;
+    background: linear-gradient(white, white) padding-box, linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1) border-box;
+}
+
+/* 10. Oval */
+.treat-10 {
+    border-radius: 50%;
+    width: 90px;
+    height: 130px;
+    border: 3px solid #d4a574;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* 11. Notched Corners */
+.treat-11 {
+    clip-path: polygon(10% 0%, 90% 0%, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0% 90%, 0% 10%);
+}
+
+/* 12. Soft Glow */
+.treat-12 {
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(45, 212, 168, 0.5), 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* 13. Film Strip */
+.treat-13 {
+    border: 12px solid #222;
+    border-left-width: 20px;
+    border-right-width: 20px;
+    background: repeating-linear-gradient(0deg, #222 0px, #222 8px, transparent 8px, transparent 16px);
+}
+
+/* 14. Brush Stroke */
+.treat-14 {
+    border-radius: 60% 40% 50% 50% / 50% 50% 40% 60%;
+    border: 3px solid #333;
 }
 
 @media (max-width: 700px) {

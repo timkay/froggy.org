@@ -4,9 +4,9 @@
   <rect x="65" y="15" width="70" height="40" fill="#3d6b1e"/>
 
   <!-- Message on board -->
-  <text x="100" y="32" font-family="Comic Sans MS, cursive" font-size="10" fill="white" text-anchor="middle">Every frog</text>
-  <text x="100" y="45" font-family="Comic Sans MS, cursive" font-size="10" fill="white" text-anchor="middle">belongs in</text>
-  <text x="100" y="58" font-family="Comic Sans MS, cursive" font-size="10" fill="#a5d6a7" text-anchor="middle">the pond!</text>
+  <text x="100" y="28" font-family="Comic Sans MS, cursive" font-size="10" fill="white" text-anchor="middle">Every frog</text>
+  <text x="100" y="40" font-family="Comic Sans MS, cursive" font-size="10" fill="white" text-anchor="middle">belongs in</text>
+  <text x="100" y="52" font-family="Comic Sans MS, cursive" font-size="10" fill="#a5d6a7" text-anchor="middle">the pond!</text>
 
   <!-- Teacher frog (left) - purple -->
   <ellipse cx="40" cy="85" rx="20" ry="18" fill="#9c27b0"/>
@@ -45,6 +45,6 @@
   <path d="M 173 94 Q 178 98 183 94" stroke="#0d47a1" stroke-width="1.5" fill="none"/>
 
   <!-- Hearts floating -->
-  <text x="130" y="75" font-size="10" fill="#e91e63">♥</text>
-  <text x="165" y="70" font-size="8" fill="#e91e63">♥</text>
+  <text x="130" y="75" font-size="14" fill="#e91e63">♥</text>
+  <text x="165" y="70" font-size="12" fill="#e91e63">♥</text>
 </svg>
