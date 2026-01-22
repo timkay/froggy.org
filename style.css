@@ -555,6 +555,9 @@ footer p {
     justify-content: center;
     z-index: 1005;
     text-shadow: 0 0 10px rgba(0,0,0,0.8), 0 0 20px rgba(0,0,0,0.6);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    user-select: none;
 }
 
 .lightbox-prev:hover,
