@@ -147,19 +147,21 @@ nav a:hover {
 main {
     padding: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5rem;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 section {
     background: white;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 16px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.06);
     transition: box-shadow 0.2s;
+    overflow: hidden;
+    height: 260px;
+    position: relative;
 }
 
 section:hover {
@@ -210,15 +212,20 @@ section a:hover {
 }
 
 .profile-photo {
-    width: 110px;
-    height: auto;
-    float: right;
-    margin: 0 0 1rem 1.5rem;
+    width: auto;
+    height: 160px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     animation: wobble 3s ease-in-out infinite;
     border: 3px solid white;
     outline: 2px solid #2dd4a8;
+}
+
+#about {
+    padding-right: 120px;
 }
 
 @keyframes wobble {
