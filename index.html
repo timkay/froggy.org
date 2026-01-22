@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Froggy.org - Jennifer Kay</title>
-    <link rel="stylesheet" href="style.css?v=18">
+    <link rel="stylesheet" href="style.css?v=24">
 </head>
 <body>
     <header>
@@ -40,5 +40,29 @@
     <footer>
         <p>&copy; 2026 Jennifer Kay | Froggy.org</p>
     </footer>
+<script>
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const maxScroll = 100;
+    const progress = Math.min(scrollY / maxScroll, 1);
+
+    const root = document.documentElement.style;
+    const header = document.querySelector('header');
+
+    root.setProperty('--header-padding', `${2 - progress * 1.7}rem ${2}rem`);
+    root.setProperty('--logo-size', `${60 - progress * 35}px`);
+    root.setProperty('--logo-margin', `0`);
+    root.setProperty('--title-size', `${2.5 - progress * 1.5}rem`);
+    root.setProperty('--tagline-opacity', `${0.9 - progress * 0.9}`);
+    root.setProperty('--nav-opacity', `${1 - progress}`);
+    root.setProperty('--nav-height', `${60 - progress * 60}px`);
+
+    if (progress > 0.5) {
+        header.classList.add('horizontal');
+    } else {
+        header.classList.remove('horizontal');
+    }
+});
+</script>
 </body>
 </html>

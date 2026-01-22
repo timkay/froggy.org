@@ -20,10 +20,40 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
     background: linear-gradient(160deg, #0d503c 0%, #1a8f6e 50%, #2dd4a8 100%);
     color: white;
     text-align: center;
-    padding: 2rem 2rem;
+    padding: var(--header-padding, 2rem);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header.horizontal {
+    flex-direction: row;
+}
+
+header.horizontal .tagline {
+    display: none;
+}
+
+.logo {
+    width: var(--logo-size, 60px);
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+}
+
+header h1 {
+    font-size: var(--title-size, 2.5rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+.tagline {
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: var(--tagline-opacity, 0.9);
 }
 
 .logo {
@@ -50,10 +80,10 @@ nav {
     background: white;
     padding: 1.2rem 2rem;
     text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
     box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    opacity: var(--nav-opacity, 1);
+    max-height: var(--nav-height, 60px);
+    overflow: hidden;
 }
 
 nav a {
