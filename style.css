@@ -137,14 +137,12 @@ section {
     background: white;
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    border-left: 4px solid #2dd4a8;
-    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: box-shadow 0.2s;
 }
 
 section:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 h2 {
@@ -155,9 +153,9 @@ h2 {
 }
 
 p {
-    font-size: 1.05rem;
-    color: #555;
-    line-height: 1.8;
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
 }
 
 section a {
