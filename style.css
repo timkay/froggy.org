@@ -72,11 +72,19 @@ nav a:hover {
 }
 
 main {
-    padding: 4rem 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
 }
 
 section {
-    margin-bottom: 4rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    aspect-ratio: 1;
+    overflow: hidden;
 }
 
 h2 {
@@ -105,9 +113,6 @@ p {
     max-width: 700px;
 }
 
-.about-content {
-    margin-top: 2rem;
-}
 
 .profile-photo {
     width: 150px;
