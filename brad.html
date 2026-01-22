@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brad's Art - froggy.org</title>
-    <link rel="stylesheet" href="style.css?v=92">
+    <link rel="stylesheet" href="style.css?v=108">
 </head>
 <body>
     <header class="header-large art-theme subpage">
@@ -75,7 +75,7 @@ let currentIndex = 0;
 function showLightbox(index) {
     currentIndex = index;
     const item = galleryItems[index];
-    lightboxContent.innerHTML = '<img src="' + item.src + '" alt="' + item.alt + '" class="lightbox-img">';
+    lightboxContent.innerHTML = '<div class="lightbox-img-wrapper"><img src="' + item.src + '" alt="' + item.alt + '" class="lightbox-img"><div class="watermark">Copyright 2026 Brad Kay.Goodman</div></div>';
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
