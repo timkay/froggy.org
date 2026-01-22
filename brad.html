@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brad's Art - froggy.org</title>
-    <link rel="stylesheet" href="style.css?v=84">
+    <link rel="stylesheet" href="style.css?v=92">
 </head>
 <body>
     <header class="header-large art-theme subpage">
@@ -26,19 +26,25 @@
     </nav>
 
     <main>
-        <section>
+        <section id="gallery">
             <h2>Gallery</h2>
             <p>A collection of Brad's artwork.</p>
             <div class="gallery">
-                <div class="placeholder">Painting 1</div>
-                <div class="placeholder">Painting 2</div>
-                <div class="placeholder">Painting 3</div>
-                <div class="placeholder">Sculpture 1</div>
-                <div class="placeholder">Drawing 1</div>
-                <div class="placeholder">Drawing 2</div>
+                <img src="art1.jpg" alt="Artwork 1" class="gallery-img">
+                <img src="art2.jpg" alt="Artwork 2" class="gallery-img">
+                <img src="art3.jpg" alt="Artwork 3" class="gallery-img">
             </div>
         </section>
     </main>
+
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close">&times;</button>
+        <button class="lightbox-prev">&#10094;</button>
+        <div class="lightbox-content">
+            <div class="lightbox-placeholder"></div>
+        </div>
+        <button class="lightbox-next">&#10095;</button>
+    </div>
 
     <footer>
         <p>&copy; 2026 Jennifer Kay | froggy.org</p>
@@ -58,6 +64,54 @@ window.addEventListener('scroll', () => {
     } else {
         headerSmall.classList.remove('visible');
     }
+});
+
+// Lightbox functionality
+const lightbox = document.getElementById('lightbox');
+const lightboxContent = lightbox.querySelector('.lightbox-content');
+const galleryItems = document.querySelectorAll('.gallery .gallery-img');
+let currentIndex = 0;
+
+function showLightbox(index) {
+    currentIndex = index;
+    const item = galleryItems[index];
+    lightboxContent.innerHTML = '<img src="' + item.src + '" alt="' + item.alt + '" class="lightbox-img">';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function hideLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+function showNext() {
+    currentIndex = (currentIndex + 1) % galleryItems.length;
+    showLightbox(currentIndex);
+}
+
+function showPrev() {
+    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+    showLightbox(currentIndex);
+}
+
+galleryItems.forEach((item, index) => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', () => showLightbox(index));
+});
+
+lightbox.querySelector('.lightbox-close').addEventListener('click', hideLightbox);
+lightbox.querySelector('.lightbox-next').addEventListener('click', showNext);
+lightbox.querySelector('.lightbox-prev').addEventListener('click', showPrev);
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) hideLightbox();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('active')) return;
+    if (e.key === 'Escape') hideLightbox();
+    if (e.key === 'ArrowRight') showNext();
+    if (e.key === 'ArrowLeft') showPrev();
 });
 </script>
 </body>
