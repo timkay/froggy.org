@@ -3,14 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brad's Art - Froggy.org</title>
-    <link rel="stylesheet" href="style.css?v=3">
+    <title>Brad's Art - froggy.org</title>
+    <link rel="stylesheet" href="style.css?v=57">
 </head>
 <body>
-    <header>
+    <header class="header-large">
         <a href="index.html"><img src="logo.svg" alt="Froggy logo" class="logo"></a>
         <h1>Brad's Art</h1>
         <p class="tagline">Artwork by Brad Kay</p>
+    </header>
+
+    <header class="header-small">
+        <a href="index.html"><img src="logo.svg" alt="Froggy logo" class="logo-small"></a>
+        <h1>Brad's Art</h1>
     </header>
 
     <nav>
@@ -31,7 +36,24 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Jennifer Kay | Froggy.org</p>
+        <p>&copy; 2026 Jennifer Kay | froggy.org</p>
     </footer>
+
+    <script>
+const headerLarge = document.querySelector('.header-large');
+const headerSmall = document.querySelector('.header-small');
+const smallHeight = 50;
+
+window.addEventListener('scroll', () => {
+    const largeHeight = headerLarge.offsetHeight;
+    const triggerPoint = largeHeight - smallHeight;
+
+    if (window.scrollY >= triggerPoint) {
+        headerSmall.classList.add('visible');
+    } else {
+        headerSmall.classList.remove('visible');
+    }
+});
+</script>
 </body>
 </html>
