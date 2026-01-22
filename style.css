@@ -34,7 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    background: linear-gradient(160deg, #0d503c 0%, #1a8f6e 50%, #2dd4a8 100%);
+    background: url('lilypad-bg.svg') center/cover;
     color: white;
     text-align: center;
     padding: 2rem;
