@@ -106,18 +106,22 @@ p {
 }
 
 .about-content {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 3rem;
-    align-items: start;
     margin-top: 2rem;
 }
 
 .profile-photo {
-    width: 100%;
+    width: 150px;
     height: auto;
-    border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+    float: right;
+    margin: 0 0 1rem 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    animation: wobble 3s ease-in-out infinite;
+}
+
+@keyframes wobble {
+    0%, 100% { transform: rotate(3deg); }
+    50% { transform: rotate(-3deg); }
 }
 
 .gallery {
@@ -163,14 +167,10 @@ footer {
         margin: 0.8rem 0;
     }
 
-    .about-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
     .profile-photo {
-        max-width: 280px;
-        margin: 0 auto;
+        float: none;
+        display: block;
+        margin: 0 auto 1.5rem;
     }
 
     h2::after {
