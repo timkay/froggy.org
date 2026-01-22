@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Froggy.org - Jennifer Kay</title>
-    <link rel="stylesheet" href="style.css?v=30">
+    <link rel="stylesheet" href="style.css?v=31">
 </head>
 <body>
-    <div class="version">v30</div>
+    <div class="version">v31</div>
+    <div class="header-spacer"></div>
     <header>
         <img src="logo.svg" alt="Froggy logo" class="logo">
         <h1>froggy.org</h1>
@@ -51,7 +52,7 @@ window.addEventListener('scroll', () => {
     const root = document.documentElement.style;
     const header = document.querySelector('header');
 
-    root.setProperty('--header-scale', `${1 - progress * 0.6}`);
+    root.setProperty('--header-padding', `${2 - progress * 1.5}rem`);
     root.setProperty('--logo-size', `${60 - progress * 35}px`);
     root.setProperty('--title-size', `${2.5 - progress * 1.5}rem`);
     root.setProperty('--tagline-opacity', `${0.9 - progress * 0.9}`);
