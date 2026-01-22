@@ -4,9 +4,9 @@
   <rect x="65" y="15" width="70" height="40" fill="#3d6b1e"/>
 
   <!-- Message on board -->
-  <text x="100" y="28" font-family="Comic Sans MS, cursive" font-size="10" fill="white" text-anchor="middle">Every frog</text>
-  <text x="100" y="40" font-family="Comic Sans MS, cursive" font-size="10" fill="white" text-anchor="middle">belongs in</text>
-  <text x="100" y="52" font-family="Comic Sans MS, cursive" font-size="10" fill="#a5d6a7" text-anchor="middle">the pond!</text>
+  <text x="100" y="28" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">Every frog</text>
+  <text x="100" y="40" font-family="Arial, sans-serif" font-size="10" fill="white" text-anchor="middle">belongs in</text>
+  <text x="100" y="52" font-family="Arial, sans-serif" font-size="10" fill="#a5d6a7" text-anchor="middle">the pond!</text>
 
   <!-- Teacher frog (left) - purple -->
   <ellipse cx="40" cy="85" rx="20" ry="18" fill="#9c27b0"/>
