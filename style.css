@@ -24,10 +24,12 @@ header {
     background: linear-gradient(160deg, #0d503c 0%, #1a8f6e 50%, #2dd4a8 100%);
     color: white;
     text-align: center;
-    padding: var(--header-padding, 2rem);
+    padding: 2rem;
     position: sticky;
     top: 0;
     z-index: 100;
+    transform-origin: top center;
+    transform: scaleY(var(--header-scale, 1));
 }
 
 header.horizontal {
