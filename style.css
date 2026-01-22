@@ -45,6 +45,17 @@ body {
     background: url('art-bg.svg') center/cover;
 }
 
+.header-large.subpage {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-left: 2rem;
+    gap: 1.5rem;
+}
+
+.header-large.subpage .tagline {
+    display: none;
+}
+
 .header-small {
     display: flex;
     flex-direction: row;
