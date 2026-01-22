@@ -156,6 +156,12 @@ section a:hover {
     border-bottom-color: #0d503c;
 }
 
+.teaching-graphic {
+    float: right;
+    width: 100px;
+    margin: 0 0 0.5rem 1rem;
+}
+
 .profile-photo {
     width: 110px;
     height: auto;
