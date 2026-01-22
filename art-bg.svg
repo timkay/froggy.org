@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="canvas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a5c45"/>
+      <stop offset="100%" style="stop-color:#0d3d2e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Canvas background -->
+  <rect width="400" height="200" fill="url(#canvas)"/>
+
+  <!-- Paint splatters -->
+  <circle cx="50" cy="40" r="25" fill="#e91e63" opacity="0.7"/>
+  <circle cx="45" cy="50" r="12" fill="#e91e63" opacity="0.5"/>
+  <circle cx="65" cy="35" r="8" fill="#e91e63" opacity="0.6"/>
+
+  <circle cx="350" cy="150" r="30" fill="#ff9800" opacity="0.6"/>
+  <circle cx="370" cy="170" r="15" fill="#ff9800" opacity="0.4"/>
+  <circle cx="330" cy="165" r="10" fill="#ff9800" opacity="0.5"/>
+
+  <circle cx="320" cy="30" r="20" fill="#2196f3" opacity="0.6"/>
+  <circle cx="340" cy="45" r="10" fill="#2196f3" opacity="0.4"/>
+
+  <circle cx="80" cy="160" r="22" fill="#9c27b0" opacity="0.5"/>
+  <circle cx="60" cy="175" r="12" fill="#9c27b0" opacity="0.4"/>
+
+  <circle cx="200" cy="180" r="18" fill="#4caf50" opacity="0.6"/>
+  <circle cx="220" cy="190" r="10" fill="#4caf50" opacity="0.4"/>
+
+  <!-- Paint drips -->
+  <path d="M 50 65 Q 48 90 52 120" stroke="#e91e63" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <path d="M 350 180 Q 355 195 350 200" stroke="#ff9800" stroke-width="3" fill="none" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- Brush strokes -->
+  <path d="M 150 20 Q 180 25 200 15 Q 230 5 260 20" stroke="rgba(255,255,255,0.15)" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M 100 100 Q 150 95 180 105 Q 220 115 250 100" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none" stroke-linecap="round"/>
+
+  <!-- Palette shape -->
+  <ellipse cx="380" cy="80" rx="35" ry="25" fill="rgba(139,69,19,0.3)" transform="rotate(20 380 80)"/>
+  <circle cx="365" cy="70" r="6" fill="#e91e63" opacity="0.8"/>
+  <circle cx="380" cy="65" r="5" fill="#ff9800" opacity="0.8"/>
+  <circle cx="395" cy="72" r="5" fill="#2196f3" opacity="0.8"/>
+  <circle cx="390" cy="85" r="4" fill="#4caf50" opacity="0.8"/>
+</svg>

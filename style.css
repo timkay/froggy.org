@@ -41,6 +41,10 @@ body {
     box-shadow: 0 4px 30px rgba(0,0,0,0.15);
 }
 
+.header-large.art-theme {
+    background: url('art-bg.svg') center/cover;
+}
+
 .header-small {
     display: flex;
     flex-direction: row;
